@@ -1,0 +1,342 @@
+/* ===========================
+   Student Grades Page Styles
+   =========================== */
+
+.student-grades-page {
+    min-height: 100vh;
+    background: var(--gradient-dark);
+    font-family: var(--font-family);
+}
+
+.page-header {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: var(--space-4) var(--space-6);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sticky);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.back-btn {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-2px);
+}
+
+.header-info h1 {
+    color: white;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    margin: 0;
+}
+
+.header-info p {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    font-size: var(--font-size-sm);
+}
+
+.page-content {
+    max-width: 1000px;
+    margin: var(--space-8) auto;
+    padding: 0 var(--space-4);
+    animation: fadeIn var(--transition-slow);
+}
+
+/* Summary Cards */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+.summary-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-6);
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    transition: all var(--transition-base);
+}
+
+.summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Overall Grade Card */
+.overall-grade .grade-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: transform var(--transition-base);
+}
+
+.summary-card:hover .grade-circle {
+    transform: scale(1.1);
+}
+
+.grade-info h3 {
+    color: white;
+    margin: 0 0 var(--space-1) 0;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+}
+
+.grade-info p {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    font-size: var(--font-size-sm);
+}
+
+/* Average Marks Card */
+.average-marks {
+    justify-content: space-between;
+}
+
+.average-value h3 {
+    color: white;
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    margin: 0;
+    line-height: 1;
+}
+
+.average-value p {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    margin-top: var(--space-1);
+    font-size: var(--font-size-sm);
+}
+
+.subjects-count {
+    text-align: center;
+    padding: var(--space-4);
+    background: rgba(99, 102, 241, 0.2);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+}
+
+.subjects-count span {
+    color: var(--primary-300);
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    display: block;
+    line-height: 1;
+}
+
+.subjects-count p {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    font-size: var(--font-size-xs);
+    margin-top: var(--space-1);
+}
+
+/* Grades List */
+.grades-list {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-6);
+}
+
+.grades-list h2 {
+    color: white;
+    margin: 0 0 var(--space-6) 0;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Grades Grid */
+.grades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-4);
+}
+
+.grade-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    transition: all var(--transition-base);
+}
+
+.grade-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(99, 102, 241, 0.4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.grade-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-4);
+}
+
+.grade-header h4 {
+    color: white;
+    margin: 0;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+}
+
+.grade-badge {
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    color: white;
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+}
+
+.grade-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-3);
+}
+
+.marks-info {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-1);
+}
+
+.marks {
+    color: white;
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+}
+
+.separator {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.max-marks {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: var(--font-size-base);
+}
+
+.percentage {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+/* Progress Bar */
+.progress-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 12px rgba(99, 102, 241, 0.5);
+}
+
+/* Semester Info */
+.semester-info {
+    margin-top: var(--space-3);
+    padding-top: var(--space-3);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: var(--font-size-xs);
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: var(--space-12);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Loading State */
+.loading {
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: var(--space-16);
+    font-size: var(--font-size-base);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .summary-cards {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .grades-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grades-list {
+        padding: var(--space-5);
+    }
+
+    .overall-grade .grade-circle {
+        width: 64px;
+        height: 64px;
+        font-size: var(--font-size-xl);
+    }
+}
+
+@media (max-width: 640px) {
+    .header-content {
+        gap: var(--space-3);
+    }
+
+    .header-info h1 {
+        font-size: var(--font-size-lg);
+    }
+
+    .page-content {
+        padding: 0 var(--space-3);
+        margin: var(--space-6) auto;
+    }
+
+    .summary-card {
+        padding: var(--space-5);
+        gap: var(--space-4);
+    }
+}
