@@ -3,7 +3,9 @@ import axios from 'axios';
 // Base URL for API calls - Uses VITE_API_URL from environment (.env files)
 // Production: Railway backend (public URL)
 // Development: Set VITE_API_URL in .env.local or uses deployed Railway URL
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://smsbackend-production-d09a.up.railway.app';
+const rawApiUrl = import.meta.env.VITE_API_URL || 'https://smsbackend-production-d09a.up.railway.app';
+// Remove trailing slash to prevent double slashes like //api/auth/login
+const API_BASE_URL = rawApiUrl.replace(/\/+$/, '');
 
 // Debug: Log the API endpoint being used
 console.log('🔌 API Endpoint:', API_BASE_URL);
