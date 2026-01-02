@@ -3,7 +3,7 @@ import "./LoginPage.css";
 import { useNavigate } from "react-router-dom";
 
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8081";
+const API_URL = import.meta.env.VITE_API_URL || "https://smsbackend-production-d09a.up.railway.app";
 
 async function loginRequest(username, password) {
   const res = await fetch(`${API_URL}/api/auth/login`, {
